@@ -26,7 +26,7 @@ var movies = [
     }
 ];
 
-
+/*
 
 var moviesElements = movies.map(function(movie){
   return React.createElement("li", {key: movie.id},
@@ -43,15 +43,14 @@ var element =
 );
 
 ReactDOM.render(element, document.getElementById('app'));
+*/
 
 // cwiczenie 14-4
 
 
-
-var MovieTitle = React.createClass({
+var Movie = React.createClass({
   propTypes: {
     title: React.propTypes.string.isRequired
-
   },
 
   render: function() {
