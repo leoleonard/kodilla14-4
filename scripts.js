@@ -49,19 +49,38 @@ ReactDOM.render(element, document.getElementById('app'));
 
 
 var Movie = React.createClass({
-  propTypes: {
-    title: React.PropTypes.array.isRequired,
-  },
-
   render: function() {
+      var moviesElements = movies.map(function (movie) {
+        return React.createElement (MovieList, {key: movies.id, movie: movie})
+      });
+
       return (
-        React.createElement("li", {key: movies.id},
-        React.createElement("h2", {}, this.props.movies.title)
+        React.createElement("ul", {},
+        moviesElements
         )
       )
     }
   });
 
+  /**
+  Movie = React.createClass({
+  render: function () {
+    var moviesElements = movies.map(function (movie) {
+      return React.createElement(MovieList, {key: movies.id, movie: movie})
+    });
 
-  var element = React.createElement(Movie, {title:title});
+    return (
+      React.createElement('ul', {},
+        moviesElements
+      )
+    )
+  }
+});
+
+
+
+   */
+
+
+  var element = React.createElement(Movie, {movies:movies });
   ReactDOM.render(element, document.getElementById("app"));
