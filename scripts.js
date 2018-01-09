@@ -55,7 +55,7 @@ var Movie = React.createClass({
 
   render: function() {
       return (
-        React.createElement("li", {key: movie.id},
+        React.createElement("li", {key: movies.id},
         React.createElement("h2", {}, this.props.movies.title)
         )
       )
@@ -63,5 +63,5 @@ var Movie = React.createClass({
   });
 
 
-  var element = React.createElement(Movie, {title: movies.title});
+  var element = React.createElement(Movie, {title:title});
   ReactDOM.render(element, document.getElementById("app"));
