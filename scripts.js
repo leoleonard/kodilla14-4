@@ -62,14 +62,6 @@ var Movie = React.createClass({
     }
   });
 
-  var movies = [
-    {
-      id: 1,
-      title: "Harry Potter",
-      desc: "Film o Horwardzie",
-      poster: "https://vignette.wikia.nocookie.net/harrypotter/images/9/9d/Harry-Potter-Wizarding-World-Weekly.jpg/revision/latest/scale-to-width-down/670?cb=20160914202759"
-    },
-  ]
 
-  var element = React.createElement(MovieTitle, {movies: title});
+  var element = React.createElement(Movie, {movies: title});
   ReactDOM.render(element, document.getElementById("app"));
