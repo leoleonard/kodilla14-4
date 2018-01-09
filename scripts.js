@@ -50,18 +50,18 @@ ReactDOM.render(element, document.getElementById('app'));
 
 var Movie = React.createClass({
   propTypes: {
-    title: React.propTypes.string.isRequired
+    title: React.PropTypes.array.isRequired,
   },
 
   render: function() {
       return (
         React.createElement("li", {key: movie.id},
-        React.createElement("h2", {}, this.props.movie.title)
+        React.createElement("h2", {}, this.props.movies.title)
         )
       )
     }
   });
 
 
-  var element = React.createElement(Movie, {movies: title});
+  var element = React.createElement(Movie, {title: movies.title});
   ReactDOM.render(element, document.getElementById("app"));
